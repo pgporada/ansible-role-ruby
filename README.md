@@ -4,13 +4,9 @@ This role does XYZ. This is a boilerplate. Fill me out.
 - - - -
 # Role Variables
 
-This var does XYZ
+List of gems to install. Defaults to empty list.
 
-    var_name: "default value"
-
-This var does ABC
-
-    some_other_var: "default value"
+    ruby_gemlist: []
 
 - - - -
 # Example Playbook
@@ -20,6 +16,10 @@ This var does ABC
       connection: local
       become: true
       become_method: sudo
+      vars:
+        ruby_gemlist:
+          - bundler
+          - kitchen
       roles:
         - ansible-role-ruby
     ...
@@ -34,15 +34,9 @@ find -type f -name "*.yml" -exec yamllint -c yamllint.yml -f parsable {} \;
 
 Set up test-kitchen dependencies
 
-    git clone git@gitlab.com:pgporada-dltcode/ansible-role-ruby.git
+    git clone git@github.com:pgporada/ansible-role-ruby.git
     bundle install
     bundle update
-
-Test-kitchen needs our bitbucket ssh key so it can pull code from Bitbucket on our behalf.
-
-    ssh-add -D
-    ssh-add -k ~/BITBUCKET_KEY_NAME
-    ssh-add -L
     bundle exec kitchen create
     bundle exec kitchen converge
     bundle exec kitchen verify
@@ -55,6 +49,6 @@ Test-kitchen needs our bitbucket ssh key so it can pull code from Bitbucket on o
 - - - -
 # Author information and license
 
-BSD
+MIT
 
 Phil Porada - philporada@gmail.com
