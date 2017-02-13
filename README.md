@@ -30,7 +30,7 @@ Before submitting a PR, please create a test and run it through test-kitchen. Yo
 
 Lint all the yaml files with [yamllint](https://github.com/adrienverge/yamllint). Warnings are ok, fix all errors before committing back up.
 
-find -type f -name "*.yml" -exec yamllint -c yamllint.yml -f parsable {} \;
+    find -type f -name "*.yml" -exec yamllint -c yamllint.yml -f parsable {} \;
 
 Set up test-kitchen dependencies
 
