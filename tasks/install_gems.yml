@@ -1,0 +1,9 @@
+---
+- name: Install useful gems
+  become: true
+  become_method: sudo
+  gem:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ ruby_gemlist|default('[]') }}"
+...

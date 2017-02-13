@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: philporada@gmail.com
+  description: ansible-role-ruby
+  company: MyTallGuy
+  license: BSD
+  min_ansible_version: 2.2
+  platforms:
+    - name: EL
+      versions:
+        - 7
+
+dependencies: []
+#  - {role: pgporada.repo-epel}
+...
