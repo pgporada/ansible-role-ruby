@@ -1,5 +1,5 @@
 # Ansible Role: ansible-role-ruby
-This role does XYZ. This is a boilerplate. Fill me out.
+This role installs a Ruby development environment.
 
 - - - -
 # Role Variables
@@ -19,7 +19,8 @@ List of gems to install. Defaults to empty list.
       vars:
         ruby_gemlist:
           - bundler
-          - kitchen
+          - rubocop
+          - guard
       roles:
         - ansible-role-ruby
     ...
@@ -44,7 +45,7 @@ Set up test-kitchen dependencies
 
 - - - -
 # Theme Music
-[The Slackers - Same Everyday](https://www.youtube.com/watch?v=Qy_2OqTvW34)
+[Mischief Brew - Old Tyme Mem'ry](https://www.youtube.com/watch?v=8uziTOL4zOs)
 
 - - - -
 # Author information and license
