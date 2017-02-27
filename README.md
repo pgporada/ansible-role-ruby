@@ -1,4 +1,5 @@
 # Ansible Role: ansible-role-ruby
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-pgporada.ruby-blue.svg)](https://galaxy.ansible.com/pgporada/ruby/)
 This role installs a Ruby development environment.
 
 - - - -
