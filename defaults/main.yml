@@ -1,5 +1,10 @@
 ---
 ruby_gemlist: []
 # ruby_gemlist:
-#   - bundler
+#   - name: bundler
+#     state: latest
+#     install_only_for_user: no
+#   - name: rake
+#     state: present
+#     install_only_for_user: no
 ...

@@ -1,6 +1,11 @@
 ---
 - hosts: test-kitchen
   gather_facts: true
+  vars:
+    ruby_gemlist:
+      - name: bundler
+      - name: rake
+      - name: rubocop
   roles:
     - ansible-role-ruby
 ...

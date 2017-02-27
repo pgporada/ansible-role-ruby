@@ -4,7 +4,7 @@ This role installs a Ruby development environment.
 - - - -
 # Role Variables
 
-List of gems to install. Defaults to empty list.
+List of gems to install. Defaults to empty list. You have the ability to always keep the gems up to date and install locally/globally.
 
     ruby_gemlist: []
 
@@ -18,9 +18,12 @@ List of gems to install. Defaults to empty list.
       become_method: sudo
       vars:
         ruby_gemlist:
-          - bundler
-          - rubocop
-          - guard
+          - name: bundler
+            state: latest
+            install_only_for_user: no
+          - name: rake
+            state: present
+            install_only_for_user: yes
       roles:
         - ansible-role-ruby
     ...
