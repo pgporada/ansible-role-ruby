@@ -1,11 +1,20 @@
 ---
-- hosts: test-kitchen
+- name: Play 1
+  hosts: test-kitchen
   gather_facts: true
   vars:
     ruby_gemlist:
       - name: bundler
       - name: rake
       - name: rubocop
+  roles:
+    - ansible-role-ruby
+
+- name: Play 2
+  hosts: test-kitchen
+  gather_facts: true
+  vars:
+    ruby_gemlist: []
   roles:
     - ansible-role-ruby
 ...

@@ -6,6 +6,5 @@
     name: "{{ item.name }}"
     state: "{{ item.state|default('present') }}"
     user_install: "{{ item.install_only_for_user|default('no') }}"
-  with_items: ruby_gemlist
-  when: ruby_gemlist is defined
+  with_items: "{{ ruby_gemlist|default([]) }}"
 ...
